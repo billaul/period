@@ -185,7 +185,7 @@ In a Controller, use the error handling to validate the date for you
 ```ruby
 class BookController < ApplicationController
   def between # match via GET and POST
-    # Default value for the range in GET context
+    # Default value for first display
     params[:from] ||= 1.month.ago
     params[:to]   ||= Time.now
 
@@ -194,7 +194,7 @@ class BookController < ApplicationController
       @books = Book.where(published: Period.new(params[:from]..params[:to]))
     rescue ArgumentError => e
       # Period will handle mis-formatted date and incoherent period
-      # I18n is support for errors messages
+      # I18n is supported for errors messages
       flash[:alert] = e.message
     end
   end
