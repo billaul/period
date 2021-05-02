@@ -7,10 +7,25 @@ Gem::Specification.new do |spec|
   spec.version       = Period::VERSION
   spec.authors       = ['billau_l']
 
-  spec.summary       = 'Manage time ranges without brain damage.'
+  spec.summary       = <<~eos
+    Manage time ranges without brain damage
+
+    DISCONTINUED DEVELOPMENT WARNING
+    The SmartPeriod gem will no longer receive any updates
+    If you want to access to new awesome features, like endless-period
+    Take a look to his successor ActivePeriod
+  eos
   # spec.description   = "Period.new('01/01/2020'..Time.now)"
   spec.homepage      = "https://github.com/billaul/period"
   spec.license       = 'MIT'
+
+  spec.post_install_message = <<~eos
+    +-| DISCONTINUED DEVELOPMENT WARNING |--------------------------------+
+    | The SmartPeriod gem will no longer receive any updates              |
+    | If you want to access to new awesome features, like endless-period  |
+    | Take a look to his successor ActivePeriod                           |
+    +---------------------------------------------------------------------+
+  eos
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
