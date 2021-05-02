@@ -1,5 +1,9 @@
 # Smart-Period [![Gem Version](https://badge.fury.io/rb/smart-period.svg)](https://badge.fury.io/rb/smart-period) [![Code Climate](https://codeclimate.com/github/billaul/period.svg)](https://codeclimate.com/github/billaul/period) [![Inline docs](http://inch-ci.org/github/billaul/period.svg)](http://inch-ci.org/github/billaul/period)
 
+⚠️ This gem will no longer receive any updates       
+⚠️ If you want to access to new awesome features, like endless-period support :hushed:      
+⚠️ Take a look to his successor [ActivePeriod](https://github.com/billaul/active_period) 🥳
+
 Smart-Period aims to simplify Time-range manipulation. 
 
 ## Installation
