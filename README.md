@@ -1,5 +1,9 @@
 # Smart-Period [![Gem Version](https://badge.fury.io/rb/smart-period.svg)](https://badge.fury.io/rb/smart-period) [![Code Climate](https://codeclimate.com/github/billaul/period.svg)](https://codeclimate.com/github/billaul/period) [![Inline docs](http://inch-ci.org/github/billaul/period.svg)](http://inch-ci.org/github/billaul/period)
 
+⚠️ This gem will no longer receive any updates       
+⚠️ If you want to access to new awesome features, like endless-period support :hushed:      
+⚠️ Take a look to his successor [ActivePeriod](https://github.com/billaul/active_period) 🥳
+
 Smart-Period aims to simplify Time-range manipulation. 
 
 ## Installation
@@ -20,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-**Smart-Period** was designed to simplify time-range manipulation, specialy with rails (~> 5) and user input   
+**Smart-Period** was designed to simplify time-range manipulation, specialy with rails and user input   
 
 **Warning** :
 - A time-range take place between two date and it's different from an abstract duration of time
@@ -185,7 +189,7 @@ In a Controller, use the error handling to validate the date for you
 ```ruby
 class BookController < ApplicationController
   def between # match via GET and POST
-    # Default value for the range in GET context
+    # Default value for first display
     params[:from] ||= 1.month.ago
     params[:to]   ||= Time.now
 
@@ -194,7 +198,7 @@ class BookController < ApplicationController
       @books = Book.where(published: Period.new(params[:from]..params[:to]))
     rescue ArgumentError => e
       # Period will handle mis-formatted date and incoherent period
-      # I18n is support for errors messages
+      # I18n is supported for errors messages
       flash[:alert] = e.message
     end
   end
